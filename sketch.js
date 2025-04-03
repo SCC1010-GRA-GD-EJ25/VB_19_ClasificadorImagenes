@@ -2,15 +2,15 @@ let clasificador
 let imagen
 function preload() {
   // put preload code here
-  //clasificador = ml5.imageClassifier("MobileNet")
-  //imagen = loadImage("./images/perrito.jpeg")
+  clasificador = ml5.imageClassifier("MobileNet")
+  imagen = loadImage("./images/perrito.jpeg")
 }
 
 function setup() {
   // put setup code here
   createCanvas(800,800)
-  //clasificador.classify(imagen, gotResult)
-  //image(imagen,0,0,width,height)
+  clasificador.classify(imagen, gotResult)
+  image(imagen,0,0,width,height)
 }
 
 function gotResult(results) {
@@ -25,6 +25,6 @@ function gotResult(results) {
 
 function draw() {
   // put drawing code here
-  background(255)
-  rect(100,100,200,200)
+  //background(255)
+  //rect(100,100,200,200)
 }
